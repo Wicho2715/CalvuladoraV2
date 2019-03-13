@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editText_Numero1"
+        android:layout_width="303dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="57dp"
+        android:ems="10"
+        android:fontFamily="serif-monospace"
+        android:hint="ingresa un numero"
+        android:inputType="text"
+        android:singleLine="false"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Numero1" />
+
+    <TextView
+        android:id="@+id/textView_Numero2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="7dp"
+        android:fontFamily="serif-monospace"
+        android:text="Numero 2:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Numero1" />
+
+    <TextView
+        android:id="@+id/textView_Resultado"
+        android:layout_width="303dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginBottom="84dp"
+        android:fontFamily="serif-monospace"
+        android:text="Resultado"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Numero2" />
+
+    <TextView
+        android:id="@+id/textView_Numero1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="100dp"
+        android:fontFamily="serif-monospace"
+        android:text="Numero 1:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_Numero2"
+        android:layout_width="303dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="57dp"
+        android:ems="10"
+        android:fontFamily="serif-monospace"
+        android:hint="ingresa un numero"
+        android:inputType="text"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Numero2" />
+
+    <ImageButton
+        android:id="@+id/imageButton_Multiplicacion"
+        android:layout_width="94dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginBottom="68dp"
+        android:background="@android:color/background_light"
+        android:onClick="multiplicacionOnclick"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton_Division"
+        app:layout_constraintStart_toEndOf="@+id/editText_Numero2"
+        app:srcCompat="@mipmap/ic_multiplicacion" />
+
+    <ImageButton
+        android:id="@+id/imageButton_Division"
+        android:layout_width="94dp"
+        android:layout_height="94dp"
+        android:layout_marginBottom="68dp"
+        android:background="@android:color/background_light"
+        android:onClick="divisionOnclick"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton_Modulo"
+        app:srcCompat="@mipmap/ic_division" />
+
+    <ImageButton
+        android:id="@+id/imageButton_Modulo"
+        android:layout_width="94dp"
+        android:layout_height="94dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="68dp"
+        android:background="@android:color/background_light"
+        android:onClick="moduloOnclick"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@mipmap/ic_modulo" />
+
+    <ImageButton
+        android:id="@+id/imageButton_Resta"
+        android:layout_width="94dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="109dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="208dp"
+        android:background="@android:color/background_light"
+        android:onClick="restaOnclick"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_Suma"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_resta" />
+
+    <ImageButton
+        android:id="@+id/imageButton_Suma"
+        android:layout_width="94dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="109dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="208dp"
+        android:background="@android:color/background_light"
+        android:onClick="sumaOnclick"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton_Resta"
+        app:layout_constraintStart_toEndOf="@+id/editText_Numero1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@mipmap/ic_suma" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView_Numero2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="46dp"
+        android:fontFamily="serif-monospace"
+        android:text="Numero 2:"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Numero1" />
+
+    <TextView
+        android:id="@+id/textView_Resultado"
+        android:layout_width="303dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="29dp"
+        android:fontFamily="serif-monospace"
+        android:text="Resultado"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Numero2" />
+
+    <EditText
+        android:id="@+id/editText_Numero2"
+        android:layout_width="500dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:ems="10"
+        android:fontFamily="serif-monospace"
+        android:hint="ingresa un numero"
+        android:inputType="text"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Numero2" />
+
+    <EditText
+        android:id="@+id/editText_Numero1"
+        android:layout_width="500dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="48dp"
+        android:ems="10"
+        android:fontFamily="serif-monospace"
+        android:hint="ingresa un numero"
+        android:inputType="text"
+        android:singleLine="false"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Numero1" />
+
+    <TextView
+        android:id="@+id/textView_Numero1"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="102dp"
+        android:fontFamily="serif-monospace"
+        android:text="Numero 1:"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton_Multiplicacion"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="141dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="66dp"
+        android:background="@android:color/background_light"
+        android:onClick="multiplicacionOnclick"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton_Resta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_Modulo"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Numero2"
+        app:srcCompat="@mipmap/ic_multiplicacion" />
+
+    <ImageButton
+        android:id="@+id/imageButton_Modulo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginBottom="385dp"
+        android:background="@android:color/background_light"
+        android:onClick="moduloOnclick"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton_Multiplicacion"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_Division"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Resultado"
+        app:srcCompat="@mipmap/ic_modulo" />
+
+    <ImageButton
+        android:id="@+id/imageButton_Division"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="50dp"
+        android:background="@android:color/background_light"
+        android:onClick="divisionOnclick"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton_Suma"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton_Modulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Resultado"
+        app:srcCompat="@mipmap/ic_division" />
+
+    <ImageButton
+        android:id="@+id/imageButton_Resta"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="184dp"
+        android:background="@android:color/background_light"
+        android:onClick="restaOnclick"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_Suma"
+        app:srcCompat="@mipmap/ic_resta" />
+
+    <ImageButton
+        android:id="@+id/imageButton_Suma"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="185dp"
+        android:background="@android:color/background_light"
+        android:onClick="sumaOnclick"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton_Resta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/ic_suma" />
+
+</android.support.constraint.ConstraintLayout>
